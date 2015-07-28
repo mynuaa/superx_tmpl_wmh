@@ -1,0 +1,71 @@
+<!--{eval require DISCUZ_ROOT .'template/superx_tmpl_wmh/lang_'.CHARSET.'.php';}-->
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Cache-control" content="{if $_G['setting']['mobile'][mobilecachetime] > 0}{$_G['setting']['mobile'][mobilecachetime]}{else}no-cache{/if}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="keywords" content="{if !empty($metakeywords)}{echo dhtmlspecialchars($metakeywords)}{/if}" />
+	<meta name="description" content="{if !empty($metadescription)}{echo dhtmlspecialchars($metadescription)} {/if},$_G['setting']['bbname']" />
+	<title><!--{if !empty($navtitle)}-->$navtitle - <!--{/if}--><!--{if empty($nobbname)}--> $_G['setting']['bbname'] - <!--{/if}--> {lang waptitle} - Powered by Discuz!</title>
+	<link rel="stylesheet" href="{STATICURL}image/mobile/style.css?{VERHASH}" type="text/css" media="all">
+	<script src="{STATICURL}js/mobile/jquery-1.8.3.min.js?{VERHASH}"></script>
+
+	<script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';</script>
+	<script src="{STATICURL}js/mobile/common.js?{VERHASH}" charset="{CHARSET}"></script>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<link rel="icon" type="image/png" href="./template/superx_tmpl_wmh/touch/images/i/favicon.png">
+	<link rel="stylesheet" href="./template/superx_tmpl_wmh/touch/images/css/amazeui.min.css?{VERHASH}">
+	<link rel="stylesheet" href="./template/superx_tmpl_wmh/touch/images/css/app.css?{VERHASH}">
+</head>
+<body>
+<!-- Header -->
+<header data-am-widget="header" class="am-header am-header-default sc_logo">
+	<!--{if $_G['setting']['domain']['app']['mobile']}-->
+	{eval $nav = 'http://'.$_G['setting']['domain']['app']['mobile'];}
+	<!--{else}-->
+	{eval $nav = "forum.php";}
+	<!--{/if}-->
+	<h1><a href="$nav">$_G['setting']['bbname']</a></h1>
+	<div data-am-widget="gotop" class="am-gotop am-gotop-fixed" style="width: auto;">
+		<a href="#top" class="am-icon-btn am-icon-arrow-up am-active" id="amz-go-top"></a>
+	</div>
+</header>
+<!-- Menu -->
+<nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas>
+	<a href="javascript: void(0)" class="am-menu-toggle">
+		<i class="am-menu-toggle-icon am-icon-bars"></i>
+	</a>
+	<div class="am-offcanvas">
+		<!--{$_G['cache']['plugin']['superx_wmh']['wmh_sidelist']}-->
+	</div>
+</nav>
+<!--{hook/global_header_mobile}-->
+<div class="am-popup" id="my-popup">
+	<div class="am-popup-inner">
+		<div class="am-popup-hd">
+			<h4 class="am-popup-title"><!--{$SC_LANG[choice]}--></h4>
+      <span data-am-modal-close
+			class="am-close">&times;</span>
+		</div>
+		<div class="am-popup-bd">
+
+			<div class="am-g" style="margin-bottom: 20px;">
+	<!--{eval loadcache('forums');}-->
+		<!--{loop $_G['cache']['forums'] $val}-->
+			<!--{if $val['type'] == 'group'}-->
+			<div class="am-u-sm-12 am-btn am-btn-warning"  style="margin-bottom: 18px;" disabled="disabled">$val['name']</div>
+			<!--{/if}-->
+			<!--{if $val['type'] == 'forum'}-->
+				<div class="am-u-sm-4 am-u-end "  style="margin-bottom: 20px;"><span class="am-btn am-btn-secondary" style="display: block;"><a
+						href="forum.php?mod=post&action=newthread&fid={$val['fid']}" style="color: #ffffff">$val['name']</a></span></div>
+			<!--{/if}-->
+			<!--{/loop}-->
+			</div>
+
+		</div>
+	</div>
+</div>

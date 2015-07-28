@@ -1,0 +1,88 @@
+
+<!--{hook/global_footer_mobile}-->
+<!--{eval $useragent = strtolower($_SERVER['HTTP_USER_AGENT']);$clienturl = ''}-->
+<!--{if strpos($useragent, 'iphone') !== false || strpos($useragent, 'ios') !== false}-->
+<!--{eval $clienturl = $_G['cache']['mobileoem_data']['iframeUrl'] ? $_G['cache']['mobileoem_data']['iframeUrl'].'&platform=ios' : 'http://www.discuz.net/mobile.php?platform=ios';}-->
+<!--{elseif strpos($useragent, 'android') !== false}-->
+<!--{eval $clienturl = $_G['cache']['mobileoem_data']['iframeUrl'] ? $_G['cache']['mobileoem_data']['iframeUrl'].'&platform=android' : 'http://www.discuz.net/mobile.php?platform=android';}-->
+<!--{elseif strpos($useragent, 'windows phone') !== false}-->
+<!--{eval $clienturl = $_G['cache']['mobileoem_data']['iframeUrl'] ? $_G['cache']['mobileoem_data']['iframeUrl'].'&platform=windowsphone' : 'http://www.discuz.net/mobile.php?platform=windowsphone';}-->
+<!--{/if}-->
+<!-- Navbar -->
+<!--{if !$nofooter}-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+	<ul class="am-navbar-nav am-cf am-avg-sm-4">
+		<li>
+			<a href="portal.php?mod=index">
+				<span class="am-icon-home"></span>
+				<span class="am-navbar-label"><!--{$SC_LANG[portal]}--></span>
+			</a>
+		</li>
+		<li>
+			<a href="forum.php?forumlist=1&mobile=2">
+				<span class="am-icon-align-justify"></span>
+				<span class="am-navbar-label"><!--{$SC_LANG[bbs]}--></span>
+			</a>
+		</li>
+		<li>
+			<a href="#" title="{lang send_threads}" data-am-modal="{target: '#my-popup'}">
+				<span class="am-icon-plus"></span>
+				<span class="am-navbar-label">{lang send_threads}</span>
+			</a>
+		</li>
+		<li>
+			<a href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1">
+				<span class="am-icon-user"></span>
+				<span class="am-navbar-label"><!--{$SC_LANG[my]}--></span>
+			</a>
+		</li>
+		<!--<li>
+			&lt;!&ndash;{if $_G[fid]}&ndash;&gt;
+			<a href="forum.php?mod=post&action=newthread&fid=$_G[fid]" title="{lang send_threads}">
+			&lt;!&ndash;{else}&ndash;&gt;
+			<a href="forum.php?mod=post&action=newthread&fid=&lt;!&ndash;{$_G['cache']['plugin']['superx_wmh']['wmh_defaultpost']}&ndash;&gt;&mobile=2">
+			&lt;!&ndash;{/if}&ndash;&gt;
+				<span class="am-icon-plus"></span>
+				<span class="am-navbar-label">{lang send_threads}</span>
+			</a>
+		</li>-->
+		<li data-am-navbar-share >
+			<a href="###">
+				<span class="am-icon-share-square-o"></span>
+				<span class="am-navbar-label"><!--{$SC_LANG[share]}--></span>
+			</a>
+		</li>
+		<!--{if !$_G[uid] && !$_G['connectguest']}-->
+		<li>
+			<a href="member.php?mod=logging&action=login">
+				<span class="am-icon-gear"></span>
+				<span class="am-navbar-label">{lang login}</span>
+			</a>
+		</li>
+		<li>
+			<a href="member.php?mod={$_G[setting][regname]}">
+				<span class="am-icon-location-arrow"></span>
+				<span class="am-navbar-label">{lang register}</span>
+			</a>
+		</li>
+		<!--{else}-->
+		<li>
+			<a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">
+				<span class="am-icon-location-arrow"></span>
+				<span class="am-navbar-label">{lang logout}</span>
+			</a>
+		</li>
+		<!--{/if}-->
+	</ul>
+</div>
+<!--{/if}-->
+<script src="./template/superx_tmpl_wmh/touch/images/js/jquery.min.js"></script>
+<script src="./template/superx_tmpl_wmh/touch/images/js/amazeui.js"></script>
+</body>
+</html>
+<!--{eval updatesession();}-->
+<!--{if defined('IN_MOBILE')}-->
+	<!--{eval output();}-->
+<!--{else}-->
+	<!--{eval output_preview();}-->
+<!--{/if}-->
