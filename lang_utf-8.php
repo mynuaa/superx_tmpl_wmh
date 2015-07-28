@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $SC_LANG = array(
     'newsrec' => '新闻推荐',
