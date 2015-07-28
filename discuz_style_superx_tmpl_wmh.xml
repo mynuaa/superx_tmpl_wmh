@@ -39,7 +39,7 @@
 			<item id="titlebgcolor"><![CDATA[#E5EDF2 titlebg.png repeat-x 0 0]]></item>
 			<item id="fontsize"><![CDATA[12px/1.5]]></item>
 			<item id="font"><![CDATA[Tahoma,'Microsoft Yahei','Simsun']]></item>
-			<item id="styleimgdir"><![CDATA[./template/superx_tmpl_wmh/touch/images]]></item>
+			<item id="styleimgdir"><![CDATA[./template/superx_tmpl_wmh/resources]]></item>
 			<item id="imgdir"><![CDATA[]]></item>
 			<item id="boardimg"><![CDATA[logo.png]]></item>
 			<item id="available"><![CDATA[]]></item>
