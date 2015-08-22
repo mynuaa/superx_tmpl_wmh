@@ -1,7 +1,7 @@
 <!--{template common/header}-->
 <div class="tip">
 <!--{if ($_GET['optgroup'] == 3 && $operation == 'delete') || ($_GET['optgroup'] == 4 && $operation == '')}-->
-    <form id="moderateform" method="post" autocomplete="off" action="forum.php?mod=topicadmin&action=moderate&optgroup=$optgroup&modsubmit=yes&mobile=2" >
+    <form id="moderateform" method="post" autocomplete="off" action="forum.php?mod=topicadmin&action=moderate&optgroup=$optgroup&modsubmit=yes&mobile=1" >
         <input type="hidden" name="frommodcp" value="$frommodcp" />
         <input type="hidden" name="formhash" value="{FORMHASH}" />
         <input type="hidden" name="fid" value="$_G[fid]" />

@@ -1,7 +1,7 @@
 <!--{template common/header}-->
 <div class="tip">
 <!--{if in_array($_GET[action], array('delpost', 'banpost', 'warn'))}-->
-	<form id="topicadminform" method="post" autocomplete="off" action="forum.php?mod=topicadmin&action=$_GET[action]&modsubmit=yes&modclick=yes&mobile=2" >
+	<form id="topicadminform" method="post" autocomplete="off" action="forum.php?mod=topicadmin&action=$_GET[action]&modsubmit=yes&modclick=yes&mobile=1" >
 		<input type="hidden" name="formhash" value="{FORMHASH}" />
 		<input type="hidden" name="fid" value="$_G[fid]" />
 		<input type="hidden" name="tid" value="$_G[tid]" />

@@ -23,7 +23,7 @@
 		<div class="sec_code vm">
 		<input name="seccodehash" type="hidden" value="$sechash" />
 		<input type="text" class="txt px vm" style="ime-mode:disabled;width:115px;background:white;" autocomplete="off" value="" id="seccodeverify_$sechash" name="seccodeverify" placeholder="{lang seccode}" fwin="seccode">
-        <img src="misc.php?mod=seccode&update={$ran}&idhash={$sechash}&mobile=2" class="seccodeimg"/>
+        <img src="misc.php?mod=seccode&update={$ran}&idhash={$sechash}&mobile=1" class="seccodeimg"/>
 		</div>
 	<!--{/if}-->
 <!--{/if}-->
@@ -33,7 +33,7 @@
 			$('#seccodeverify_$sechash').attr('value', '');
 			var tmprandom = 'S' + Math.floor(Math.random() * 1000);
 			$('.sechash').attr('value', tmprandom);
-			$(this).attr('src', 'misc.php?mod=seccode&update={$ran}&idhash='+ tmprandom +'&mobile=2');
+			$(this).attr('src', 'misc.php?mod=seccode&update={$ran}&idhash='+ tmprandom +'&mobile=1');
 		});
 	})();
 </script>
