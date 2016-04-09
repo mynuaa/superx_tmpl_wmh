@@ -9,6 +9,8 @@
 <!--{eval $clienturl = $_G['cache']['mobileoem_data']['iframeUrl'] ? $_G['cache']['mobileoem_data']['iframeUrl'].'&platform=windowsphone' : 'http://www.discuz.net/mobile.php?platform=windowsphone';}-->
 <!--{/if}-->
 <!-- Navbar -->
+<!--{if $_GET['inApp'] == 1}-->
+<!--{else}-->
 <!--{if !$nofooter}-->
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
 	<ul class="am-navbar-nav am-cf am-avg-sm-4">
@@ -75,6 +77,7 @@
 		<!--{/if}-->
 	</ul>
 </div>
+<!--{/if}-->
 <!--{/if}-->
 <!-- <script src="./template/superx_tmpl_wmh/resources/js/jquery.min.js"></script> -->
 <script src="./template/superx_tmpl_wmh/resources/js/amazeui.js"></script>
