@@ -22,6 +22,9 @@
 	<link rel="stylesheet" href="./template/superx_tmpl_wmh/resources/css/app.css?{VERHASH}">
 </head>
 <body>
+<!--{if $_SERVER['HTTP_USER_AGENT'] == "My_APP"}-->
+<!-- app签到不显示页头 -->
+<!--{else}-->
 <!-- Header -->
 <header data-am-widget="header" class="am-header am-header-default sc_logo">
 	<!--{if $_G['setting']['domain']['app']['mobile']}-->
@@ -43,6 +46,7 @@
 		<!--{$_G['cache']['plugin']['superx_wmh']['wmh_sidelist']}-->
 	</div>
 </nav>
+<!--{/if}-->
 <!--{hook/global_header_mobile}-->
 <div class="am-popup" id="my-popup">
 	<div class="am-popup-inner">
