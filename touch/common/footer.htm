@@ -9,7 +9,8 @@
 <!--{eval $clienturl = $_G['cache']['mobileoem_data']['iframeUrl'] ? $_G['cache']['mobileoem_data']['iframeUrl'].'&platform=windowsphone' : 'http://www.discuz.net/mobile.php?platform=windowsphone';}-->
 <!--{/if}-->
 <!-- Navbar -->
-<!--{if $_GET['inApp'] == 1}-->
+<!--{if $_SERVER['HTTP_USER_AGENT'] == "My_APP"}-->
+<!-- app签到不显示页脚 -->
 <!--{else}-->
 <!--{if !$nofooter}-->
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
