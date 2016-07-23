@@ -13,8 +13,28 @@
 <!-- app签到不显示页脚 -->
 <!--{else}-->
 <!--{if !$nofooter}-->
+
+<!--app下载引导-->
+<div class="footer_1" id="foot_1">
+	<div class="download-btn">
+		<img src="./template/superx_tmpl_wmh/resources/i/logo_zfj.png" alt="zfj">
+	</div>
+	<div class="word">
+		<div class="title">纸飞机&nbsp;移动客户端</div>
+		<div class="description">离梦想最近的地方！</div>
+	</div>
+	<a class=download onclick='userAgent()'>立即下载</a>
+	<a class="close" href="javascript:void(0);" onclick='hide()'></a>
+</div>
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
 	<ul class="am-navbar-nav am-cf am-avg-sm-4">
+<script>
+	var UA = navigator.userAgent;
+  	var isApp = (/my_app/i.test(UA));
+  	if(isApp){
+  		 document.getElementById("foot_1").style.display="none";
+  	}	
+</script>
 		<!--<li>
 			<a href="portal.php?mod=index">
 				<span class="am-icon-home"></span>

@@ -15065,3 +15065,72 @@ tbody.am-collapse.am-in {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+/*手机页面下方app下载引导*/
+.footer_1{
+    position:fixed;
+    bottom:49px;
+    height:60px;
+    border-radius:2px;
+    border: 1px solid #D1E6F3;
+    background:#F6F3F3;
+    width:100%;
+    padding:10px 21px;
+    -webkit-box-shadow: 2px -5px 12px rgba(0,0,0,.25);
+    -moz-box-shadow: 2px -5px 12px rgba(0,0,0,.25);
+    box-shadow: 2px -5px 12px rgba(0,0,0,.25); 
+}
+  
+.download-btn img{
+    height:40px;
+    width:40px;
+}
+.download-btn{
+    float:left;
+    display:block;
+    border:1px solid #C2C8D1;
+    border-radius:4px;
+    height:40px;width:40px;
+    background: -webkit-linear-gradient(to bottom,#FFFBFB ,#E9EBEB 100%);
+    background: -o-linear-gradient(to bottom,#FFFBFB ,#E9EBEB 100%);
+    background: linear-gradient(to bottom,#FFFBFB ,#E9EBEB 100%)
+}
+.footer_1 .word{ 
+    float: left; 
+    padding:1px 100px 0 15px;
+    display:block;font-size:14px;
+}
+.footer_1 .word .title{
+    color: #444; 
+    font-weight: 700;
+}
+.footer_1 .word .description{
+    color: #999;
+    font-size: 12px;
+}
+.footer_1 .download{
+    position: absolute;
+    border-radius:3px;
+    right:33px;
+    margin-right:0;
+    margin-top:5px;
+    border:1px solid #0E90D2;
+    font-size:16px;
+    color:#0E90D2;
+    display:inline-block;
+    height:32px;
+    font-weight: 700;
+    line-height: 32px;
+    padding: 0 6px;
+}
+.footer_1 .close{
+    position: absolute;
+    display:inline-block;
+    height: 15px;
+    width: 15px;
+    right: 7px;
+    top: 22px;
+    opacity:0.5;   
+    background:url(../i/close.png);
+    background-size:18px;
+}
+#foot_1{}
