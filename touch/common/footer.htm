@@ -14,6 +14,7 @@
 <!--{else}-->
 <!--{if !$nofooter}-->
 
+
 <!--app下载引导-->
 <div class="footer_1" id="foot_1">
 	<div class="download-btn">
@@ -24,17 +25,17 @@
 		<div class="description">离梦想最近的地方！</div>
 	</div>
 	<a class=download onclick='userAgent()'>立即下载</a>
-	<a class="close" href="javascript:void(0);" onclick='hide()'></a>
+	<a class="close" href="javascript:void(0);" onclick='download_hide()'></a>
 </div>
-<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
-	<ul class="am-navbar-nav am-cf am-avg-sm-4">
 <script>
 	var UA = navigator.userAgent;
-  	var isApp = (/my_app/i.test(UA));
+  	var isApp = (/My_APP/i.test(UA));
   	if(isApp){
   		 document.getElementById("foot_1").style.display="none";
   	}	
 </script>
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+	<ul class="am-navbar-nav am-cf am-avg-sm-4">
 		<!--<li>
 			<a href="portal.php?mod=index">
 				<span class="am-icon-home"></span>
@@ -102,6 +103,7 @@
 <!--{/if}-->
 <!-- <script src="./template/superx_tmpl_wmh/resources/js/jquery.min.js"></script> -->
 <script src="./template/superx_tmpl_wmh/resources/js/amazeui.js"></script>
+<script  src="./template/superx_tmpl_wmh/resources/js/app.js"></script>
 </body>
 </html>
 <!--{eval updatesession();}-->
