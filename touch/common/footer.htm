@@ -8,6 +8,7 @@
 <!--{elseif strpos($useragent, 'windows phone') !== false}-->
 <!--{eval $clienturl = $_G['cache']['mobileoem_data']['iframeUrl'] ? $_G['cache']['mobileoem_data']['iframeUrl'].'&platform=windowsphone' : 'http://www.discuz.net/mobile.php?platform=windowsphone';}-->
 <!--{/if}-->
+<!--{if !preg_match('/My_APP/i', $_SERVER['HTTP_USER_AGENT'])}-->
 <!-- Navbar -->
 <!--{if !$nofooter}-->
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
@@ -75,6 +76,7 @@
 		<!--{/if}-->
 	</ul>
 </div>
+<!--{/if}-->
 <!--{/if}-->
 <!-- <script src="./template/superx_tmpl_wmh/resources/js/jquery.min.js"></script> -->
 <script src="./template/superx_tmpl_wmh/resources/js/amazeui.js"></script>
