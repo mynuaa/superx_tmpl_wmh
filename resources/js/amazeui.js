@@ -15916,3 +15916,4 @@ module.exports = $.AMUI.pay = {
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"2":2}]},{},[1])(1)
 });
+

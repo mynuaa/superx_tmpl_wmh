@@ -1,4 +1,3 @@
-
 <!--{hook/global_footer_mobile}-->
 <!--{eval $useragent = strtolower($_SERVER['HTTP_USER_AGENT']);$clienturl = ''}-->
 <!--{if strpos($useragent, 'iphone') !== false || strpos($useragent, 'ios') !== false}-->
@@ -10,7 +9,31 @@
 <!--{/if}-->
 <!--{if !preg_match('/My_APP/i', $_SERVER['HTTP_USER_AGENT'])}-->
 <!-- Navbar -->
+<!--{if $_SERVER['HTTP_USER_AGENT'] == "My_APP"}-->
+<!-- app签到不显示页脚 -->
+<!--{else}-->
 <!--{if !$nofooter}-->
+
+
+<!--app下载引导-->
+<div class="footer_1" id="foot_1">
+	<div class="download-btn">
+		<img src="./template/superx_tmpl_wmh/resources/i/logo_zfj.png" alt="zfj">
+	</div>
+	<div class="word">
+		<div class="title">纸飞机&nbsp;移动客户端</div>
+		<div class="description">离梦想最近的地方！</div>
+	</div>
+	<a class=download onclick='userAgent()'>立即下载</a>
+	<a class="close" href="javascript:void(0);" onclick='download_hide()'></a>
+</div>
+<script>
+	var UA = navigator.userAgent;
+  	var isApp = (/My_APP/i.test(UA));
+  	if(isApp){
+  		 document.getElementById("foot_1").style.display="none";
+  	}
+</script>
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
 	<ul class="am-navbar-nav am-cf am-avg-sm-4">
 		<!--<li>
@@ -80,6 +103,7 @@
 <!--{/if}-->
 <!-- <script src="./template/superx_tmpl_wmh/resources/js/jquery.min.js"></script> -->
 <script src="./template/superx_tmpl_wmh/resources/js/amazeui.js"></script>
+<script  src="./template/superx_tmpl_wmh/resources/js/app.js"></script>
 </body>
 </html>
 <!--{eval updatesession();}-->

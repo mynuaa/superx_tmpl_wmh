@@ -11460,7 +11460,7 @@ tbody.am-collapse.am-in {
   * Gotop Theme: fixed
   */
 .am-gotop-fixed {
-  position: fixed;
+  /*position: fixed;*/
   right: 10px;
   bottom: 10px;
   z-index: 1010;
