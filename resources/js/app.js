@@ -27,6 +27,6 @@ function userAgent(){
     window.location.href='http://my.nuaa.edu.cn/thread-304740-1-1.html';
   }
   if(isAndroid){
-    window.location.href='http://bigapp.youzu.com/mc/silence/dcodeDownload&app_id=7632';
+    window.location.href='http://oceg1qe2m.bkt.clouddn.com/mynuaa.apk';
   }
 }
