@@ -130,3 +130,9 @@
     display: inline;
     padding: 0;
 }
+input[type=text] {
+    min-height: 32px;
+}
+.am-popup-hd {
+    z-index: 1;
+}
