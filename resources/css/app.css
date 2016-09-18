@@ -122,4 +122,11 @@
     background:url(../i/close.png);
     background-size:18px;
 }
-#foot_1{}
+.threadlist li em {
+    display: inline-block;
+    padding: 5px 10px 0;
+}
+.threadlist li em a {
+    display: inline;
+    padding: 0;
+}
