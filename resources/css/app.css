@@ -136,3 +136,6 @@ input[type=text] {
 .am-popup-hd {
     z-index: 1;
 }
+.am-gotop-fixed {
+    display: none;
+}
