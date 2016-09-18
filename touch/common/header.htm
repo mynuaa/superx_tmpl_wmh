@@ -60,7 +60,7 @@
 			<div class="am-g" style="margin-bottom: 20px;">
 	<!--{eval loadcache('forums');}-->
 		<!--{loop $_G['cache']['forums'] $val}-->
-			<!--{if $val['type'] == 'group'}-->
+			<!--{if $val['type'] == 'group' && $val['status'] == 1}-->
 			<div class="am-u-sm-12 am-btn am-btn-warning"  style="margin-bottom: 18px;" disabled="disabled">$val['name']</div>
 			<!--{/if}-->
 			<!--{if $val['type'] == 'forum'}-->
